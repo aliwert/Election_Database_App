@@ -1,6 +1,6 @@
 ﻿namespace Election_Database_App
 {
-    partial class Form1
+    partial class FrmVote
     {
         /// <summary>
         /// Required designer variable.
@@ -149,6 +149,7 @@
             this.BtnVote.TabIndex = 12;
             this.BtnVote.Text = "Vote";
             this.BtnVote.UseVisualStyleBackColor = true;
+            this.BtnVote.Click += new System.EventHandler(this.BtnVote_Click);
             // 
             // BtnGraphics
             // 
@@ -168,7 +169,7 @@
             this.BtnLogout.Text = "Log Out";
             this.BtnLogout.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FrmVote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,7 +192,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
+            this.Name = "FrmVote";
             this.Text = "DBGE";
             this.ResumeLayout(false);
             this.PerformLayout();

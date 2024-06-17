@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.progressBar5 = new System.Windows.Forms.ProgressBar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.label5 = new System.Windows.Forms.Label();
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
@@ -43,10 +47,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
-            this.label6 = new System.Windows.Forms.Label();
+            this.LblA = new System.Windows.Forms.Label();
+            this.LblB = new System.Windows.Forms.Label();
+            this.LblC = new System.Windows.Forms.Label();
+            this.LblD = new System.Windows.Forms.Label();
+            this.LblE = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -64,23 +69,28 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(3, 21);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1225, 289);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.LblE);
+            this.groupBox2.Controls.Add(this.LblD);
+            this.groupBox2.Controls.Add(this.LblC);
+            this.groupBox2.Controls.Add(this.LblB);
+            this.groupBox2.Controls.Add(this.LblA);
             this.groupBox2.Controls.Add(this.progressBar5);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.progressBar4);
@@ -100,9 +110,44 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Value of District";
             // 
+            // progressBar5
+            // 
+            this.progressBar5.Location = new System.Drawing.Point(232, 312);
+            this.progressBar5.Maximum = 200;
+            this.progressBar5.Name = "progressBar5";
+            this.progressBar5.Size = new System.Drawing.Size(291, 32);
+            this.progressBar5.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(163, 326);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 18);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Party E:";
+            // 
+            // progressBar4
+            // 
+            this.progressBar4.Location = new System.Drawing.Point(232, 260);
+            this.progressBar4.Maximum = 200;
+            this.progressBar4.Name = "progressBar4";
+            this.progressBar4.Size = new System.Drawing.Size(291, 32);
+            this.progressBar4.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(163, 274);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 18);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Party D:";
+            // 
             // progressBar3
             // 
             this.progressBar3.Location = new System.Drawing.Point(232, 201);
+            this.progressBar3.Maximum = 200;
             this.progressBar3.Name = "progressBar3";
             this.progressBar3.Size = new System.Drawing.Size(291, 32);
             this.progressBar3.TabIndex = 7;
@@ -119,6 +164,7 @@
             // progressBar2
             // 
             this.progressBar2.Location = new System.Drawing.Point(232, 143);
+            this.progressBar2.Maximum = 200;
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(291, 32);
             this.progressBar2.TabIndex = 5;
@@ -135,6 +181,7 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(232, 76);
+            this.progressBar1.Maximum = 200;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(291, 32);
             this.progressBar1.TabIndex = 3;
@@ -152,7 +199,7 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(307, 13);
+            this.comboBox1.Location = new System.Drawing.Point(232, 13);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(170, 26);
             this.comboBox1.TabIndex = 1;
@@ -160,43 +207,56 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 21);
+            this.label1.Location = new System.Drawing.Point(121, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chose District:";
             // 
-            // progressBar4
+            // LblA
             // 
-            this.progressBar4.Location = new System.Drawing.Point(232, 260);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(291, 32);
-            this.progressBar4.TabIndex = 9;
+            this.LblA.AutoSize = true;
+            this.LblA.Location = new System.Drawing.Point(542, 90);
+            this.LblA.Name = "LblA";
+            this.LblA.Size = new System.Drawing.Size(17, 18);
+            this.LblA.TabIndex = 12;
+            this.LblA.Text = "0";
             // 
-            // label5
+            // LblB
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(163, 274);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Party D:";
+            this.LblB.AutoSize = true;
+            this.LblB.Location = new System.Drawing.Point(542, 157);
+            this.LblB.Name = "LblB";
+            this.LblB.Size = new System.Drawing.Size(17, 18);
+            this.LblB.TabIndex = 13;
+            this.LblB.Text = "0";
             // 
-            // progressBar5
+            // LblC
             // 
-            this.progressBar5.Location = new System.Drawing.Point(232, 312);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(291, 32);
-            this.progressBar5.TabIndex = 11;
+            this.LblC.AutoSize = true;
+            this.LblC.Location = new System.Drawing.Point(542, 215);
+            this.LblC.Name = "LblC";
+            this.LblC.Size = new System.Drawing.Size(17, 18);
+            this.LblC.TabIndex = 14;
+            this.LblC.Text = "0";
             // 
-            // label6
+            // LblD
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(163, 326);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Party E:";
+            this.LblD.AutoSize = true;
+            this.LblD.Location = new System.Drawing.Point(542, 274);
+            this.LblD.Name = "LblD";
+            this.LblD.Size = new System.Drawing.Size(17, 18);
+            this.LblD.TabIndex = 15;
+            this.LblD.Text = "0";
+            // 
+            // LblE
+            // 
+            this.LblE.AutoSize = true;
+            this.LblE.Location = new System.Drawing.Point(542, 326);
+            this.LblE.Name = "LblE";
+            this.LblE.Size = new System.Drawing.Size(17, 18);
+            this.LblE.TabIndex = 16;
+            this.LblE.Text = "0";
             // 
             // FrmGraphics
             // 
@@ -236,5 +296,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ProgressBar progressBar4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblE;
+        private System.Windows.Forms.Label LblD;
+        private System.Windows.Forms.Label LblC;
+        private System.Windows.Forms.Label LblB;
+        private System.Windows.Forms.Label LblA;
     }
 }
