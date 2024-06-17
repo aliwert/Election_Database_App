@@ -113,7 +113,7 @@
             // progressBar5
             // 
             this.progressBar5.Location = new System.Drawing.Point(232, 312);
-            this.progressBar5.Maximum = 200;
+            this.progressBar5.Maximum = 200000;
             this.progressBar5.Name = "progressBar5";
             this.progressBar5.Size = new System.Drawing.Size(291, 32);
             this.progressBar5.TabIndex = 11;
@@ -130,7 +130,7 @@
             // progressBar4
             // 
             this.progressBar4.Location = new System.Drawing.Point(232, 260);
-            this.progressBar4.Maximum = 200;
+            this.progressBar4.Maximum = 200000;
             this.progressBar4.Name = "progressBar4";
             this.progressBar4.Size = new System.Drawing.Size(291, 32);
             this.progressBar4.TabIndex = 9;
@@ -147,7 +147,7 @@
             // progressBar3
             // 
             this.progressBar3.Location = new System.Drawing.Point(232, 201);
-            this.progressBar3.Maximum = 200;
+            this.progressBar3.Maximum = 200000;
             this.progressBar3.Name = "progressBar3";
             this.progressBar3.Size = new System.Drawing.Size(291, 32);
             this.progressBar3.TabIndex = 7;
@@ -164,7 +164,7 @@
             // progressBar2
             // 
             this.progressBar2.Location = new System.Drawing.Point(232, 143);
-            this.progressBar2.Maximum = 200;
+            this.progressBar2.Maximum = 200000;
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(291, 32);
             this.progressBar2.TabIndex = 5;
@@ -181,7 +181,7 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(232, 76);
-            this.progressBar1.Maximum = 200;
+            this.progressBar1.Maximum = 200000;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(291, 32);
             this.progressBar1.TabIndex = 3;
@@ -203,6 +203,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(170, 26);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -269,6 +270,7 @@
             this.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmGraphics";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DBGS";
             this.Load += new System.EventHandler(this.FrmGraphics_Load);
             this.groupBox1.ResumeLayout(false);

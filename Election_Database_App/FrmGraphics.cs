@@ -47,5 +47,27 @@ namespace Election_Database_App
 
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bgl.Open();
+            SqlCommand kmt = new SqlCommand("Select * From TBLILCE where ILCEAD=@P1", bgl);
+            kmt.Parameters.AddWithValue("@P1", comboBox1.Text);
+            SqlDataReader dr = kmt.ExecuteReader();
+            while (dr.Read())
+            {
+                progressBar1.Value = int.Parse(dr[2].ToString());
+                progressBar2.Value = int.Parse(dr[3].ToString());
+                progressBar3.Value = int.Parse(dr[4].ToString());
+                progressBar4.Value = int.Parse(dr[5].ToString());
+                progressBar5.Value = int.Parse(dr[6].ToString());
+
+                LblA.Text = dr[2].ToString();
+                LblB.Text = dr[3].ToString();
+                LblC.Text = dr[4].ToString();
+                LblD.Text = dr[5].ToString();
+                LblE.Text = dr[6].ToString();
+            }
+        }
     }
 }
