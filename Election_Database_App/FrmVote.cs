@@ -33,5 +33,12 @@ namespace Election_Database_App
             bgl.Close();
             MessageBox.Show("Successfully");
         }
+
+        private void BtnGraphics_Click(object sender, EventArgs e)
+        {
+            FrmGraphics frmg = new FrmGraphics();
+            frmg.Show();
+
+        }
     }
 }

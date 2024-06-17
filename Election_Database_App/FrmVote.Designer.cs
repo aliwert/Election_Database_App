@@ -159,6 +159,7 @@
             this.BtnGraphics.TabIndex = 14;
             this.BtnGraphics.Text = "Graphics";
             this.BtnGraphics.UseVisualStyleBackColor = true;
+            this.BtnGraphics.Click += new System.EventHandler(this.BtnGraphics_Click);
             // 
             // BtnLogout
             // 
