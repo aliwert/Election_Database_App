@@ -30,6 +30,22 @@ namespace Election_Database_App
             }
             bgl.Close();
 
+            // get sum result to graphics
+            bgl.Open();
+            SqlCommand kmt2 = new SqlCommand("Select SUM(APARTI), SUM(BPARTI), SUM(CPARTI),  SUM(DPARTI),  SUM(EPARTI) FROM TBLILCE", bgl);
+            SqlDataReader dr2 = kmt2.ExecuteReader();
+            while (dr2.Read())
+            {
+                chart1.Series["Parties"].Points.AddXY("PARTY A", dr2[0]);
+                chart1.Series["Parties"].Points.AddXY("PARTY B", dr2[1]);
+                chart1.Series["Parties"].Points.AddXY("PARTY C", dr2[2]);
+                chart1.Series["Parties"].Points.AddXY("PARTY D", dr2[3]);
+                chart1.Series["Parties"].Points.AddXY("PARTY E", dr2[4]);
+
+            }
+            bgl.Close();
+
+
         }
     }
 }
